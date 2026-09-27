@@ -102,19 +102,22 @@ body{background:#EDF7F0;color:#0B3D2E}
 
 /* Spaziatura richiesta: solo card delle giocatrici */
 #rosterTrackInner .roster-card:not(.roster-staff-card) .roster-player-copy{
-  transform:translateY(10px)!important;
+  transform:translateY(20px)!important;
 }
 #rosterTrackInner .roster-card:not(.roster-staff-card) .roster-player-meta .roster-jersey-inline{
   display:inline-flex!important;
   align-items:baseline!important;
   gap:6px!important;
   letter-spacing:normal!important;
-  transform:translateY(20px)!important;
+  transform:translateY(40px)!important;
 }
 #rosterTrackInner .roster-card:not(.roster-staff-card) .roster-jersey-inline>span:last-child{
   letter-spacing:-.075em;
 }
 
+
+/* Numero giocatrici allineato a destra */
+#rosterTrackInner .roster-card:not(.roster-staff-card) .roster-player-meta .roster-jersey-inline{grid-column:2!important;justify-self:end!important;justify-content:flex-end!important;margin-left:auto!important;text-align:right!important}
 </style>
 </head>
 <body>
