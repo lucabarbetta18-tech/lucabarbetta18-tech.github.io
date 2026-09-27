@@ -99,6 +99,41 @@ body{background:#EDF7F0;color:#0B3D2E}
 #overview .content-grid > .card.panel:first-child .panel-title{font-size:26px!important;font-weight:900!important;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase}
 #overview .content-grid>.card.panel:first-child .panel-title{font-size:26px!important;font-weight:900!important;line-height:1.05!important;letter-spacing:-.02em!important;text-transform:uppercase!important}
 @media(max-width:650px){#overview .content-grid>.card.panel:first-child .panel-head{flex-wrap:wrap}#overview .content-grid>.card.panel:first-child .panel-head>button{margin-left:auto}#overview .content-grid>.card.panel:first-child .panel-title{font-size:26px!important}}
+/* Colori invertiti: Libero e Centrale, uniformi in tutte le sezioni */
+#rosterTrackInner .roster-card.roster-role-libero,:is(.roster-card,.player-card,.athlete-profile-hero,.athlete-season-stat,.athlete-stat-card).roster-role-libero{background:#B6FF6B!important;border-color:#92D94A!important}
+#rosterTrackInner .roster-card.roster-role-centrale,:is(.roster-card,.player-card,.athlete-profile-hero,.athlete-season-stat,.athlete-stat-card).roster-role-centrale{background:#A7EBC2!important;border-color:#75D59C!important}
+
+
+/* Override mirato: colori ruoli invertiti Libero/Centrale */
+#rosterTrackInner .roster-card.roster-role-libero,
+.player-card.roster-role-libero,
+.athlete-profile-hero.roster-role-libero,
+.athlete-season-stat.roster-role-libero,
+.athlete-stat-card.roster-role-libero{
+  background:#B6FF6B!important;
+  border-color:#92D94A!important;
+}
+#rosterTrackInner .roster-card.roster-role-centrale,
+.player-card.roster-role-centrale,
+.athlete-profile-hero.roster-role-centrale,
+.athlete-season-stat.roster-role-centrale,
+.athlete-stat-card.roster-role-centrale{
+  background:#A7EBC2!important;
+  border-color:#75D59C!important;
+}
+#rosterTrackInner .roster-card.roster-role-libero :is(.roster-card-name,.roster-card-role,.roster-jersey-inline),
+#rosterTrackInner .roster-card.roster-role-centrale :is(.roster-card-name,.roster-card-role,.roster-jersey-inline),
+.player-card.roster-role-libero :is(.player-name,.player-position,.player-stats b,.player-stats span),
+.player-card.roster-role-centrale :is(.player-name,.player-position,.player-stats b,.player-stats span),
+.athlete-profile-hero.roster-role-libero :is(.athlete-detail-name,.athlete-detail-role),
+.athlete-profile-hero.roster-role-centrale :is(.athlete-detail-name,.athlete-detail-role),
+.athlete-season-stat.roster-role-libero :is(span,b,small),
+.athlete-season-stat.roster-role-centrale :is(span,b,small),
+.athlete-stat-card.roster-role-libero :is(.athlete-identity,.match-stat-field),
+.athlete-stat-card.roster-role-centrale :is(.athlete-identity,.match-stat-field){
+  color:#0B3D2E!important;
+}
+
 </style>
 </head>
 <body>
