@@ -118,6 +118,10 @@ body{background:#EDF7F0;color:#0B3D2E}
 
 /* Numero giocatrici allineato a destra */
 #rosterTrackInner .roster-card:not(.roster-staff-card) .roster-player-meta .roster-jersey-inline{grid-column:2!important;justify-self:end!important;justify-content:flex-end!important;margin-left:auto!important;text-align:right!important}
+
+/* Numero giocatrici fissato in basso a destra della card */
+#rosterTrackInner .roster-card:not(.roster-staff-card){position:relative!important}
+#rosterTrackInner .roster-card:not(.roster-staff-card) .roster-player-meta .roster-jersey-inline{position:absolute!important;right:14px!important;bottom:6px!important;left:auto!important;top:auto!important;margin:0!important;transform:none!important;justify-content:flex-end!important}
 </style>
 </head>
 <body>
