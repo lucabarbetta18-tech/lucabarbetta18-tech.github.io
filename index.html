@@ -22,6 +22,37 @@
 #kpis .kpi:nth-child(1){background:#1693A5;border-color:#1693A5}#kpis .kpi:nth-child(2){background:#02AAB0;border-color:#02AAB0}#kpis .kpi:nth-child(3){background:#00CDAC;border-color:#00CDAC}#kpis .kpi:nth-child(4){background:#7FFF24;border-color:#7FFF24}#kpis .kpi:after{display:none}#kpis .kpi .kpi-top,#kpis .kpi .kpi-value,#kpis .kpi .kpi-foot,#kpis .kpi .kpi-icon{color:#07191A}#overview .content-grid>article.card:first-child{background:#FFA566;border-color:#DB8244}#overview .next-match-panel .next-match{background:#FF6B6B!important}#overview .next-match .next-label,#overview .next-match .next-title,#overview .next-match .next-competition,#overview .next-match .next-datetime,#overview .next-match .team-name,#overview .next-match .versus-mark,#overview .next-match .match-meta{color:#07191A!important}
 .next-match .team-name.team-logo-tile{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;min-height:0!important;color:#fff}.next-match .team-logo-tile img{display:block;width:88px;max-width:100%;height:88px;object-fit:contain}.next-match .team-side{gap:5px}.next-match .team-city{font-size:clamp(9px,2.6vw,12px);line-height:1.15;white-space:normal;overflow-wrap:anywhere;letter-spacing:.035em}@media(max-width:650px){.next-match .team-logo-tile img{width:70px;height:70px}.next-match .team-city{font-size:clamp(9px,3vw,11px)}}
 .next-match .team-side{align-items:center;gap:8px}.next-match .team-side .team-logo-tile{order:1;display:flex;align-items:center;justify-content:center;width:100%;height:100px;min-height:100px;padding:0;border:0!important;border-radius:0;background:transparent!important;box-shadow:none}.next-match .team-side .team-logo-tile img{display:block;width:100%;height:96px;max-height:96px;object-fit:contain}.next-match .team-side .team-city{order:2;width:100%;font-size:clamp(9px,10cqw,14px);line-height:1.15;white-space:normal;overflow-wrap:anywhere;text-align:center}
+
+/* Nuova palette dashboard Pallavolo Rho */
+:root{--ink:#0B3D2E;--muted:#527564;--paper:#EDF7F0;--navy:#0B3D2E;--navy2:#0B3D2E;--line:#D5E9DC;--orange:#2E7D52;--orange-light:#A7EBC2;--green:#39D98A;--green-light:#A7EBC2;--red:#FF6B6B;--shadow:0 10px 28px rgba(11,61,46,.08)}
+body{background:#EDF7F0;color:#0B3D2E}
+.sidebar{background:linear-gradient(160deg,#0B3D2E 0%,#2E7D52 72%,#0B3D2E 100%)}
+.sidebar:before{border-color:#A7EBC230;box-shadow:0 0 0 22px #A7EBC21c,0 0 0 45px #39D98A12}
+.nav button:hover,.nav button.active{background:#A7EBC222;color:#fff}
+.nav button.active{box-shadow:inset 3px 0 #B6FF6B}
+@media(max-width:650px){.nav button.active{box-shadow:inset 0 -2px #B6FF6B}}
+.topbar{border-color:#D5E9DC}.eyebrow{color:#2E7D52}h1,.topbar #dateLabel{color:#0B3D2E}
+.card{border-color:#D5E9DC;box-shadow:0 9px 27px rgba(11,61,46,.07)}
+.btn-primary{background:#2E7D52;border-color:#2E7D52;box-shadow:0 5px 13px #2E7D5230}.btn-primary:hover{background:#0B3D2E;border-color:#0B3D2E}
+#kpis .kpi:nth-child(1){background:#2E7D52;border-color:#2E7D52}#kpis .kpi:nth-child(2){background:#39D98A;border-color:#39D98A}#kpis .kpi:nth-child(3){background:#A7EBC2;border-color:#A7EBC2}#kpis .kpi:nth-child(4){background:#B6FF6B;border-color:#B6FF6B}
+#kpis .kpi:after{display:none}#kpis .kpi .kpi-top,#kpis .kpi .kpi-value,#kpis .kpi .kpi-foot,#kpis .kpi .kpi-icon{color:#0B3D2E}#kpis .kpi:nth-child(1) .kpi-top,#kpis .kpi:nth-child(1) .kpi-value,#kpis .kpi:nth-child(1) .kpi-foot,#kpis .kpi:nth-child(1) .kpi-icon{color:#fff}
+#overview .content-grid>article.card:first-child{background:#A7EBC2;border-color:#75D59C}
+#overview .next-match-panel .next-match{background:#FF6B6B!important}
+#overview .next-match .next-label,#overview .next-match .next-title,#overview .next-match .next-competition,#overview .next-match .next-datetime,#overview .next-match .team-name,#overview .next-match .team-city,#overview .next-match .versus-mark,#overview .next-match .match-meta{color:#0B3D2E!important}
+#overview .next-match .team-logo-tile{color:#0B3D2E!important}
+#overview .next-match .versus-mark{background:#0B3D2E1a}
+#overview .content-grid>.card.panel:nth-child(2),#overview .roster-carousel-panel{background:#E7F7ED}
+#overview .bottom-grid>.card.panel:not(.next-match-panel){background:#F3FAF5}
+#overview .match-card{background:#F3FAF5}
+.roster-card:nth-child(4n+1),.player-card:nth-child(4n+1){background:#F3FAF5}.roster-card:nth-child(4n+2),.player-card:nth-child(4n+2){background:#E7F7ED}.roster-card:nth-child(4n+3),.player-card:nth-child(4n+3){background:#DDF4E6}.roster-card:nth-child(4n),.player-card:nth-child(4n){background:#E9F9D7}
+.roster-card .roster-card-name,.player-name{color:#0B3D2E}.roster-card .roster-card-role,.player-position{color:#2E7D52}.roster-card .roster-player-meta .roster-jersey,.player-number{color:#0B3D2E}
+.mini-stat:nth-child(odd){background:#E7F7ED}.mini-stat:nth-child(even){background:#DDF4E6}
+.expand-match{background:#2E7D52;border-color:#2E7D52}.expand-match:hover{background:#0B3D2E;border-color:#0B3D2E}
+.fill{background:#39D98A}.legend-dot{background:#39D98A}
+.match-detail-row>td{background:#F3FAF5}.player-match-details{background:#F8FCF9;border-color:#D5E9DC}
+.athlete-stat-card:nth-child(4n+1),.athlete-season-stat{background:#F3FAF5}.athlete-stat-card:nth-child(4n+2),.athlete-season-stat:nth-child(3n+2){background:#E7F7ED}.athlete-stat-card:nth-child(4n+3),.athlete-season-stat:nth-child(3n){background:#DDF4E6}.athlete-stat-card:nth-child(4n){background:#E9F9D7}
+.recent-table tbody tr:nth-child(odd) td,.match-full tbody tr:not(.match-detail-row):nth-child(even) td{background-color:#F3FAF5}
+.field input:focus,.field select:focus,.table-toolbar input:focus,.roster-arrow:focus-visible{outline-color:#39D98A55;border-color:#2E7D52}
 </style>
 </head>
 <body>
