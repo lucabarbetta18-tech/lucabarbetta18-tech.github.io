@@ -273,6 +273,19 @@ body{background:#EDF7F0;color:#0B3D2E}
 #kpis .kpi .kpi-foot{font-size:clamp(10px,.75vw,13px);line-height:1.2;font-weight:800}
 #kpis .kpi .kpi-value{width:100%;text-align:right;font-size:clamp(54px,3.6vw,64px)!important;line-height:.95;margin:8px 0 3px;letter-spacing:-.08em}
 @media(max-width:650px){#kpis .kpi{min-height:137px;padding:12px}#kpis .kpi .kpi-top{font-size:clamp(11px,3vw,13px)}#kpis .kpi .kpi-foot{font-size:clamp(9px,2.6vw,11px)}}
+/* Ultime partite: colonne richieste con intestazioni e dati ingranditi */
+#overview .recent-table thead th:nth-child(1),#overview .recent-table thead th:nth-child(2),#overview .recent-table thead th:nth-child(3),#overview .recent-table thead th:nth-child(5){font-size:18px!important;line-height:1.2!important}
+#overview .recent-table tbody td:nth-child(1){font-size:20px!important;line-height:1.25!important}
+#overview .recent-table tbody td:nth-child(2) .recent-match-labels{font-size:18px!important;gap:7px!important}
+#overview .recent-table tbody td:nth-child(2) .recent-team-label,#overview .recent-table tbody td:nth-child(2) .recent-vs{font-size:18px!important;line-height:1.15!important}
+#overview .recent-table tbody td:nth-child(3),#overview .recent-table tbody td:nth-child(3) .result{font-size:20px!important;line-height:1.15!important}
+#overview .recent-table tbody td:nth-child(5){font-size:20px!important;line-height:1.2!important}
+@media(max-width:760px){
+ #overview .recent-table tbody td:nth-child(1):before,#overview .recent-table tbody td:nth-child(2):before,#overview .recent-table tbody td:nth-child(3):before,#overview .recent-table tbody td:nth-child(5):before{font-size:18px!important;line-height:1.15!important}
+ #overview .recent-table tbody td:nth-child(1),#overview .recent-table tbody td:nth-child(5){font-size:18px!important}
+ #overview .recent-table tbody td:nth-child(2) .recent-team-label,#overview .recent-table tbody td:nth-child(2) .recent-vs{font-size:18px!important}
+ #overview .recent-table tbody td:nth-child(3) .result{font-size:24px!important;padding:5px 9px!important}
+}
 </style>
 </head>
 <body>
