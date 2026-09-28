@@ -266,6 +266,13 @@ body{background:#EDF7F0;color:#0B3D2E}
  html body .match-full tbody tr.match-detail-row>td{display:block!important;width:100%!important;padding:0 0 10px!important;border:0!important}
  html body .match-full tbody tr.match-detail-row>td:before{display:none!important}
 }
+/* Menu e KPI: maiuscolo, testo più grande e valori allineati a destra */
+.sidebar .nav button{text-transform:uppercase}
+#kpis .kpi{min-height:145px;text-transform:uppercase}
+#kpis .kpi .kpi-top{font-size:clamp(12px,.95vw,16px);line-height:1.15;font-weight:900;gap:8px}
+#kpis .kpi .kpi-foot{font-size:clamp(10px,.75vw,13px);line-height:1.2;font-weight:800}
+#kpis .kpi .kpi-value{width:100%;text-align:right;font-size:clamp(54px,3.6vw,64px)!important;line-height:.95;margin:8px 0 3px;letter-spacing:-.08em}
+@media(max-width:650px){#kpis .kpi{min-height:137px;padding:12px}#kpis .kpi .kpi-top{font-size:clamp(11px,3vw,13px)}#kpis .kpi .kpi-foot{font-size:clamp(9px,2.6vw,11px)}}
 </style>
 </head>
 <body>
