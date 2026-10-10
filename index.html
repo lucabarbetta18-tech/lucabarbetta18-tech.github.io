@@ -491,7 +491,7 @@ const players=[
  {name:'Silvia Genoni',num:44,pos:'Schiacciatrice',captain:true,kills:0,aces:0,blocks:0,digs:0},
  {name:'Arianna Radice',num:53,pos:'Palleggiatrice',kills:0,aces:0,blocks:0,digs:0},
  {name:'Chiara Papetti',num:64,pos:'Schiacciatrice',kills:0,aces:0,blocks:0,digs:0},
- {name:'Noemi Re Cecconi',num:65,pos:'Ruolo da assegnare',kills:0,aces:0,blocks:0,digs:0}
+ {name:'Noemi Re Cecconi',num:65,pos:'Centrale',kills:0,aces:0,blocks:0,digs:0}
 ];
 let matchIdSequence=0;let matches=initialMatches.map(m=>({...m,_id:'match-'+(++matchIdSequence),playerStats:{...(m.playerStats||{})}}));for(const p of players){for(const m of matches){const st=(m.playerStats||{})[String(p.num)]||{};p.kills+=Number(st.kills||0);p.aces+=Number(st.aces||0);p.blocks+=Number(st.blocks||0);p.digs+=Number(st.digs||0)}}const TECHNICAL_PASSWORD='lucafilm';let technicalMode=false;let techLoginError=false;let hasEdited=true;let editingMatchId=null;let activePeriod='all';let openMatchDetails=new Set();
 const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
