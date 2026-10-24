@@ -529,6 +529,29 @@ body{background:#EDF7F0;color:#0B3D2E}
 }
 </style>
 
+<style id="match-names-single-line">
+@media (min-width:761px){
+  #matches .match-card .table-wrap{overflow-x:auto!important}
+  #matches .match-full{min-width:1260px!important;table-layout:fixed!important}
+  #matches .match-full th:nth-child(1),#matches .match-full td:nth-child(1){width:8%!important}
+  #matches .match-full th:nth-child(2),#matches .match-full td:nth-child(2){width:38%!important}
+  #matches .match-full th:nth-child(3),#matches .match-full td:nth-child(3){width:12%!important}
+  #matches .match-full th:nth-child(4),#matches .match-full td:nth-child(4){width:7%!important}
+  #matches .match-full th:nth-child(5),#matches .match-full td:nth-child(5){width:5%!important}
+  #matches .match-full th:nth-child(6),#matches .match-full td:nth-child(6){width:9%!important}
+  #matches .match-full th:nth-child(7),#matches .match-full td:nth-child(7){width:5%!important}
+  #matches .match-full th:nth-child(8),#matches .match-full td:nth-child(8){width:4%!important}
+  #matches .match-full th:nth-child(9),#matches .match-full td:nth-child(9){width:4%!important}
+  #matches .match-full th:nth-child(10),#matches .match-full td:nth-child(10){width:8%!important}
+}
+#matches .calendar-matchup{gap:5px;min-width:0}
+#matches .calendar-match-team{flex:1 1 0;min-width:0;white-space:nowrap;font-size:10px}
+#matches .calendar-team-name{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;overflow-wrap:normal;word-break:normal}
+@media(max-width:760px){
+  #matches .calendar-match-team{font-size:8.5px;gap:3px}
+  #matches .calendar-match-team img{width:19px;height:19px;flex-basis:19px}
+}
+</style>
 </head>
 <body>
 <div class="shell">
