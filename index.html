@@ -691,14 +691,35 @@ button[hidden],input[hidden],.competition-section-content[hidden]{display:none!i
   .kpi-competition-grid>.kpi-placeholder .kpi-placeholder-title{font-size:10px!important}
 }
 
-/* ===== Mobile: ultime partite in finestra con espansione ===== */
-#recentToggle{display:none;width:100%;margin-top:10px}
+/* ===== Mobile: ultime partite in finestra scorrevole (una partita visibile) ===== */
 @media(max-width:760px){
-  #recentTableViewport{overflow:hidden!important;height:auto!important;touch-action:pan-y!important;overscroll-behavior:auto!important}
-  #recentTableViewport.recent-expanded{overflow:visible!important;max-height:none!important}
-  #recentTableViewport.recent-collapsed tbody tr:nth-child(n+2){display:none!important}
-  #recentToggle{display:flex;justify-content:center}
-  .roster-carousel-panel,.roster-track{touch-action:pan-y!important}
+  #recentTableViewport{overflow-y:auto!important;overflow-x:hidden!important;height:auto!important;max-height:var(--recent-one-row,120px)!important;touch-action:pan-y!important;overscroll-behavior:auto!important;-webkit-overflow-scrolling:touch}
+  #recentTableViewport .recent-table tbody tr{border-bottom:1px solid var(--line)}
+}
+
+/* ===== Mobile: classifiche compatte, punti visibili, scorrimento orizzontale evidente ===== */
+@media(max-width:760px){
+  .standings-full-wrap{-webkit-overflow-scrolling:touch;mask-image:linear-gradient(to right,#000 88%,transparent 100%);-webkit-mask-image:linear-gradient(to right,#000 88%,transparent 100%);padding-right:14px}
+  .standings-full{min-width:700px!important;table-layout:fixed!important}
+  .standings-full col:nth-child(1){width:34px!important}
+  .standings-full col:nth-child(2){width:124px!important}
+  .standings-full col:nth-child(3){width:46px!important}
+  .standings-full col:nth-child(4),.standings-full col:nth-child(5),.standings-full col:nth-child(6),.standings-full col:nth-child(7),.standings-full col:nth-child(8){width:44px!important}
+  .standings-full col:nth-child(9){width:52px!important}
+  .standings-full col:nth-child(10),.standings-full col:nth-child(11){width:50px!important}
+  .standings-full col:nth-child(12){width:52px!important}
+  .standings-full col:nth-child(13){width:72px!important}
+  .standings-full th,.standings-full td{font-size:10px!important;padding:6px 3px!important;line-height:1.2!important}
+  .standings-full td:nth-child(2){white-space:normal!important}
+  .standings-full .league-club-logo,.standings-full td img{display:none!important}
+  .standings-full .league-team-alias{display:none!important}
+  .standings-full .league-team-primary{font-size:10px!important;line-height:1.15!important;font-weight:800}
+  .standings-full .league-team-logo-row{display:block!important}
+  .standings-full th:nth-child(1),.standings-full td:nth-child(1){position:sticky;left:0;z-index:2;background:#F3FAF5!important}
+  .standings-full th:nth-child(2),.standings-full td:nth-child(2){position:sticky;left:34px;z-index:2;background:#F3FAF5!important;box-shadow:2px 0 4px rgba(11,61,46,.08)}
+  .standings-full th:nth-child(3),.standings-full td:nth-child(3){font-weight:900!important}
+  .standings-full tbody tr.rho-full-row td{background:#E9F7A9!important}
+  .standings-scroll-hint{font-size:11px!important;font-weight:700;color:#0B3D2E!important}
 }
 </style>
 </head>
@@ -1015,28 +1036,16 @@ let activeVideoPlayback=null,youtubeApiLoadPromise=null,videoPlayerSequence=0;co
 </script>
 
 <script>(()=>{const vp=document.getElementById('recentTableViewport');if(!vp)return;const tbody=document.getElementById('recentRows');
-let btn=document.getElementById('recentToggle');
-if(!btn){btn=document.createElement('button');btn.id='recentToggle';btn.type='button';btn.className='btn btn-quiet';vp.insertAdjacentElement('afterend',btn)}
+const old=document.getElementById('recentToggle');if(old)old.remove();
 const mobile=()=>window.matchMedia('(max-width:760px)').matches;
-const count=()=>tbody?tbody.querySelectorAll('tr').length:0;
-function apply(){
-  const n=count();
-  if(!mobile()){vp.classList.remove('recent-collapsed','recent-expanded');vp.style.maxHeight='';btn.hidden=true;return}
-  if(n<=1){vp.classList.remove('recent-collapsed');vp.classList.add('recent-expanded');btn.hidden=true;return}
-  btn.hidden=false;
-  const open=vp.classList.contains('recent-expanded');
-  if(open){vp.classList.remove('recent-collapsed');btn.textContent='Mostra meno'}
-  else{vp.classList.add('recent-collapsed');vp.classList.remove('recent-expanded');btn.textContent='Mostra tutte le partite ('+n+')'}
+function fit(){
+  if(!mobile()){vp.style.removeProperty('--recent-one-row');return}
+  const first=tbody&&tbody.querySelector('tr');
+  if(first){vp.style.setProperty('--recent-one-row',first.offsetHeight+'px')}
+  vp.scrollTop=0;
 }
-btn.addEventListener('click',()=>{
-  const open=!vp.classList.contains('recent-expanded');
-  vp.classList.toggle('recent-expanded',open);
-  apply();
-  if(!open){vp.scrollTop=0;}
-});
-if(tbody&&'MutationObserver' in window){new MutationObserver(apply).observe(tbody,{childList:true})}
-window.addEventListener('resize',apply);
-apply();
-setTimeout(apply,300);
+if(tbody&&'MutationObserver' in window){new MutationObserver(fit).observe(tbody,{childList:true})}
+window.addEventListener('resize',fit);
+fit();setTimeout(fit,300);
 })();</script>
 </body></html>
